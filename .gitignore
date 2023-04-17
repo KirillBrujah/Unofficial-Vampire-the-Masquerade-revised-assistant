@@ -13,3 +13,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+
+# DB File
+/app/src/main/assets/vtm_assistant_db
