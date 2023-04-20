@@ -5,14 +5,14 @@
     <data>
         <variable
             name="viewModel"
-            type="com.cainites.unofficialvtmrevisedassistant.characters.CharactersViewModel" />
+            type="com.cainites.unofficialvtmrevisedassistant.fragments.game_characters.GameCharactersViewModel" />
 
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".characters.CharactersFragment">
+        tools:context=".fragments.game_characters.GameCharactersFragment">
 
         <TextView
             android:layout_width="match_parent"

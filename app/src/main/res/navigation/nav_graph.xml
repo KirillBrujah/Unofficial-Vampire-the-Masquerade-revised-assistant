@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/charactersFragment"
-        android:name="com.cainites.unofficialvtmrevisedassistant.characters.CharactersFragment"
+        android:name="com.cainites.unofficialvtmrevisedassistant.fragments.game_characters.GameCharactersFragment"
         android:label="fragment_characters"
-        tools:layout="@layout/fragment_characters" />
+        tools:layout="@layout/fragment_game_characters" />
 </navigation>

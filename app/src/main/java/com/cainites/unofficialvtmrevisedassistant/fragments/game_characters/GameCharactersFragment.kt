@@ -1,4 +1,4 @@
-package com.cainites.unofficialvtmrevisedassistant.characters
+package com.cainites.unofficialvtmrevisedassistant.fragments.game_characters
 
 import android.os.Bundle
 import android.util.Log
@@ -9,19 +9,19 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.coroutineScope
 import com.cainites.unofficialvtmrevisedassistant.VtmAssistantApplication
-import com.cainites.unofficialvtmrevisedassistant.databinding.FragmentCharactersBinding
+import com.cainites.unofficialvtmrevisedassistant.databinding.FragmentGameCharactersBinding
 import kotlinx.coroutines.launch
 
-class CharactersFragment : Fragment() {
+class GameCharactersFragment : Fragment() {
 
 
-    private var _binding: FragmentCharactersBinding? = null
+    private var _binding: FragmentGameCharactersBinding? = null
 
 
     private val binding get() = _binding!!
 
-    private val viewModel: CharactersViewModel by activityViewModels {
-        CharactersViewModelFactory((activity?.application as VtmAssistantApplication).database.userCharactersDao())
+    private val viewModel: GameCharactersViewModel by activityViewModels {
+        GameCharactersViewModelFactory((activity?.application as VtmAssistantApplication).database.gameCharactersDao())
     }
 
     override fun onCreateView(
@@ -29,7 +29,7 @@ class CharactersFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentCharactersBinding.inflate(inflater, container, false)
+        _binding = FragmentGameCharactersBinding.inflate(inflater, container, false)
         return  binding.root
     }
 
