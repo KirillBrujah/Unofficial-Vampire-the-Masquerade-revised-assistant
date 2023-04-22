@@ -11,7 +11,8 @@ const val clans = TableNames.clans
 
 @DatabaseView(
     viewName = DatabaseViewNames.gameCharactersInfo,
-    value = "SELECT ${gameCharacters}.name, ${gameCharacters}.description, ${gameCharacters}.generation, ${clans}.name as \"clan_name\"" +
+    value = "SELECT ${gameCharacters}.name, ${gameCharacters}.description, " +
+            "${gameCharacters}.generation, ${clans}.name as \"clan_name\"" +
             "FROM $gameCharacters JOIN $clans on ${gameCharacters}.clan_id = ${clans}.id",
 )
 data class GameCharacterInfo(
