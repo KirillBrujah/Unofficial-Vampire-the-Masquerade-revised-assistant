@@ -2,10 +2,11 @@ package com.cainites.unofficialvtmrevisedassistant.database.entities.game_charac
 
 import androidx.room.Dao
 import androidx.room.Query
+import com.cainites.unofficialvtmrevisedassistant.database.TableNames
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface GameCharactersDao {
-    @Query("SELECT * from game_characters")
+    @Query("SELECT * from ${TableNames.gameCharacters}")
     fun getAll(): Flow<List<GameCharacter>>
 }

@@ -4,11 +4,12 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
+import com.cainites.unofficialvtmrevisedassistant.database.TableNames
 import com.cainites.unofficialvtmrevisedassistant.database.entities.clans.Clan
 import com.cainites.unofficialvtmrevisedassistant.database.entities.disciplines.Discipline
 
 @Entity(
-    tableName = "clans_disciplines",
+    tableName = "${TableNames.clansDisciplines}",
     foreignKeys = [
         ForeignKey(
             entity = Clan::class,
