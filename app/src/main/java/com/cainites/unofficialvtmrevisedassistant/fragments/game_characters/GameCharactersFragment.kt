@@ -21,7 +21,7 @@ class GameCharactersFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: GameCharactersViewModel by activityViewModels {
-        GameCharactersViewModelFactory((activity?.application as VtmAssistantApplication).database.gameCharactersDao())
+        GameCharactersViewModelFactory((activity?.application as VtmAssistantApplication).database.gameCharactersInfoDao())
     }
 
     override fun onCreateView(

@@ -9,7 +9,7 @@ import com.cainites.unofficialvtmrevisedassistant.database.entities.clans.Clan
 import com.cainites.unofficialvtmrevisedassistant.database.entities.disciplines.Discipline
 
 @Entity(
-    tableName = "${TableNames.clansDisciplines}",
+    tableName = TableNames.clansDisciplines,
     foreignKeys = [
         ForeignKey(
             entity = Clan::class,

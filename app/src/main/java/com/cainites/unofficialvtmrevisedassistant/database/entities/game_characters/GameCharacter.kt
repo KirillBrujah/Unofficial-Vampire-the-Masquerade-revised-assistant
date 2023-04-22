@@ -8,7 +8,7 @@ import com.cainites.unofficialvtmrevisedassistant.database.TableNames
 import com.cainites.unofficialvtmrevisedassistant.database.entities.clans.Clan
 
 @Entity(
-    tableName = "${TableNames.gameCharacters}",
+    tableName = TableNames.gameCharacters,
     foreignKeys = [
         ForeignKey(
             entity = Clan::class,
