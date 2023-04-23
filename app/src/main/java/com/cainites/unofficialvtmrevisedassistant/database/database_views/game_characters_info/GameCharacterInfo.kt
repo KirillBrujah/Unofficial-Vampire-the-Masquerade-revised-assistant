@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.DatabaseView
 import com.cainites.unofficialvtmrevisedassistant.database.DatabaseViewNames
 import com.cainites.unofficialvtmrevisedassistant.database.TableNames
+import com.cainites.unofficialvtmrevisedassistant.utils.StringFunctions
 
 
 const val gameCharacters = TableNames.gameCharacters
@@ -19,5 +20,7 @@ data class GameCharacterInfo(
     val description: String?,
     val generation: Int,
     @ColumnInfo("clan_name") val clanName: String,
-
-    )
+    ) {
+    val clanAndGeneration : String
+    get() = "$clanName: ${StringFunctions.getRoman(generation)}"
+}
