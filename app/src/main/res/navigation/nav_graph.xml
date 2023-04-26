@@ -9,5 +9,14 @@
         android:id="@+id/charactersFragment"
         android:name="com.cainites.unofficialvtmrevisedassistant.fragments.game_characters.GameCharactersFragment"
         android:label="Characters"
-        tools:layout="@layout/fragment_game_characters" />
+        tools:layout="@layout/fragment_game_characters" >
+        <action
+            android:id="@+id/action_charactersFragment_to_createGameCharacterFragment"
+            app:destination="@id/createGameCharacterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createGameCharacterFragment"
+        android:name="com.cainites.unofficialvtmrevisedassistant.fragments.create_game_character.CreateGameCharacterFragment"
+        android:label="fragment_create_game_character"
+        tools:layout="@layout/fragment_create_game_character" />
 </navigation>
