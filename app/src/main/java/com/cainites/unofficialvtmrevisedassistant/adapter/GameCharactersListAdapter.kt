@@ -1,5 +1,6 @@
 package com.cainites.unofficialvtmrevisedassistant.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -35,6 +36,8 @@ class GameCharactersListAdapter :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GameCharacterViewHolder {
+        Log.d("ADAPTER", "onCreateViewHolder")
+
         val viewHolder = GameCharacterViewHolder(
             GameCharactersListItemBinding.inflate(
                 LayoutInflater.from(parent.context),

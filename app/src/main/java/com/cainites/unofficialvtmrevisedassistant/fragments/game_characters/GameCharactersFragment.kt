@@ -1,6 +1,7 @@
 package com.cainites.unofficialvtmrevisedassistant.fragments.game_characters
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,12 +30,15 @@ class GameCharactersFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        Log.d("GAME CHARACTERS", "On create fragment")
         _binding = FragmentGameCharactersBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        Log.d("GAME CHARACTERS", "On view created")
 
 
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -48,6 +52,7 @@ class GameCharactersFragment : Fragment() {
 
         lifecycle.coroutineScope.launch {
             viewModel.allCharacters().collect {
+                Log.d("DB:\t", it.toString())
                 gameCharactersListAdapter.submitList(it)
             }
         }
