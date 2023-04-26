@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <variable
             name="gameCharacterInfo"
             type="com.cainites.unofficialvtmrevisedassistant.database.database_views.game_characters_info.GameCharacterInfo" />
@@ -11,9 +12,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:background="@color/pink"
-        >
+        android:layout_margin="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,36 +21,36 @@
             <ImageView
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                android:src="@drawable/brujah_logo"
                 android:background="@color/white"
-                android:contentDescription="@string/character_logo" />
+                android:contentDescription="@string/character_logo"
+                android:src="@drawable/brujah_logo" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginVertical="10dp"
-                >
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
                     android:layout_marginBottom="6dp"
                     android:text="@{gameCharacterInfo.name}"
-                    />
+                    android:textAlignment="center" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp"
-                    android:text="@{gameCharacterInfo.clanAndGeneration}"
-                    />
+                    android:text="@{gameCharacterInfo.clanAndGeneration}" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp"
-                    android:textAlignment="textEnd"
                     android:text="23.04.2023"
-                    />
+                    android:textAlignment="textEnd" />
             </LinearLayout>
 
         </LinearLayout>
