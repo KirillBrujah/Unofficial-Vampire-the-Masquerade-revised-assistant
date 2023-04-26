@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Unofficial VtM rev Assistant</string>
+    <string name="character_logo">Character logo</string>
 </resources>

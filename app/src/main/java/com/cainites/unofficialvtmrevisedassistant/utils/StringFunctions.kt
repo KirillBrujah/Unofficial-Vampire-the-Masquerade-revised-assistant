@@ -3,7 +3,7 @@ package com.cainites.unofficialvtmrevisedassistant.utils
 class StringFunctions {
     companion object {
         fun getRoman(generation: Int) : String {
-            val generations = mapOf<Int, String>(
+            val generations = mapOf(
                 1 to "I",
                 2 to "II",
                 3 to "III",
